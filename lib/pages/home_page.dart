@@ -53,10 +53,16 @@ class _HomePageState extends State<HomePage>
           //get individual food
           final food = categoryMenu[index];
 
-          //return food tile UI 
-          return MyFoodTile(food: food, onTap: (){
-() => Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage(food: food)));
-          });
+          //return food tile UI
+          return MyFoodTile(
+            food: food,
+            onTap: () {
+               Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => FoodPage(food: food)),
+              );
+            },
+          );
         },
       );
     }).toList();
@@ -86,7 +92,10 @@ class _HomePageState extends State<HomePage>
                   ],
                 ),
               ),
+                
             ],
+          
+
         body: Consumer<Restaurant>(
           builder:
               (context, restaurant, child) => TabBarView(

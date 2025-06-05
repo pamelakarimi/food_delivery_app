@@ -1,15 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/model/food.dart';
 
-class Restaurant extends ChangeNotifier{
-  //list of food menu
+class Restaurant extends ChangeNotifier {
+  // list of food menu
   final List<Food> _menu = [
-    //burgers
+    // burgers
     Food(
       name: "Classic Cheeseburger",
-      description:
-          "A juicy beef patty with melted cheddar, fresh tomato, crisp lettuce, onion, and pickles on a toasted bun.",
-      imagePath: "lib/images/burger1.png",
+      description: "A juicy beef patty with melted cheddar, fresh tomato, crisp lettuce, onion, and pickles on a toasted bun.",
+      imagePath: "assets/images/burgers/burgers1.jpg",
       prices: 780,
       availableAddons: [
         Addon(name: "Extra cheese", price: 100),
@@ -18,12 +17,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.burgers,
     ),
-
     Food(
       name: "BBQ Bacon Burger",
-      description:
-          "Smoky BBQ sauce, crispy bacon, cheddar cheese, and grilled onions on a flame-grilled beef patty.",
-      imagePath: "lib/images/burger2.png",
+      description: "Smoky BBQ sauce, crispy bacon, cheddar cheese, and grilled onions on a flame-grilled beef patty.",
+      imagePath: "assets/images/burgers/burgers2.jpg",
       prices: 850,
       availableAddons: [
         Addon(name: "Extra cheese", price: 100),
@@ -32,12 +29,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.burgers,
     ),
-
     Food(
       name: "Veggie Burger",
-      description:
-          "A grilled plant-based patty with lettuce, tomato, onion, and vegan mayo on a whole wheat bun.",
-      imagePath: "lib/images/burger3.png",
+      description: "A grilled plant-based patty with lettuce, tomato, onion, and vegan mayo on a whole wheat bun.",
+      imagePath: "assets/images/burgers/burgers3.jpg",
       prices: 720,
       availableAddons: [
         Addon(name: "Vegan cheese", price: 100),
@@ -46,12 +41,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.burgers,
     ),
-
     Food(
       name: "Spicy Jalapeño Burger",
-      description:
-          "Spicy beef patty with pepper jack cheese, jalapeños, chipotle mayo, and crispy onions.",
-      imagePath: "lib/images/burger4.png",
+      description: "Spicy beef patty with pepper jack cheese, jalapeños, chipotle mayo, and crispy onions.",
+      imagePath: "assets/images/burgers/burgers4.jpg",
       prices: 790,
       availableAddons: [
         Addon(name: "Extra jalapeños", price: 50),
@@ -60,12 +53,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.burgers,
     ),
-
     Food(
       name: "Mushroom Swiss Burger",
-      description:
-          "Savory mushrooms sautéed in garlic butter, melted Swiss cheese, and beef patty on a sesame bun.",
-      imagePath: "lib/images/burger5.png",
+      description: "Savory mushrooms sautéed in garlic butter, melted Swiss cheese, and beef patty on a sesame bun.",
+      imagePath: "assets/images/burgers/burgers5.jpg",
       prices: 830,
       availableAddons: [
         Addon(name: "Truffle aioli", price: 130),
@@ -74,12 +65,12 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.burgers,
     ),
-    //salads
+
+    // salads
     Food(
       name: "Classic Caesar Salad",
-      description:
-          "Crisp romaine lettuce, parmesan cheese, garlic croutons, and creamy Caesar dressing.",
-      imagePath: "lib/images/salad1.png",
+      description: "Crisp romaine lettuce, parmesan cheese, garlic croutons, and creamy Caesar dressing.",
+      imagePath: "assets/images/salads/salad1.jpg",
       prices: 620,
       availableAddons: [
         Addon(name: "Grilled chicken", price: 150),
@@ -88,12 +79,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.salads,
     ),
-
     Food(
       name: "Greek Salad",
-      description:
-          "Fresh cucumbers, tomatoes, red onions, kalamata olives, and feta cheese tossed in a lemon-oregano vinaigrette.",
-      imagePath: "lib/images/salad2.png",
+      description: "Fresh cucumbers, tomatoes, red onions, kalamata olives, and feta cheese tossed in a lemon-oregano vinaigrette.",
+      imagePath: "assets/images/salads/salad2.jpg",
       prices: 650,
       availableAddons: [
         Addon(name: "Grilled chicken", price: 150),
@@ -102,12 +91,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.salads,
     ),
-
     Food(
       name: "Quinoa Avocado Salad",
-      description:
-          "A wholesome mix of quinoa, cherry tomatoes, avocado, red onion, and spinach with a lemon vinaigrette.",
-      imagePath: "lib/images/salad3.png",
+      description: "A wholesome mix of quinoa, cherry tomatoes, avocado, red onion, and spinach with a lemon vinaigrette.",
+      imagePath: "assets/images/salads/salad3.jpg",
       prices: 680,
       availableAddons: [
         Addon(name: "Boiled egg", price: 70),
@@ -117,12 +104,11 @@ class Restaurant extends ChangeNotifier{
       category: FoodCategory.salads,
     ),
 
-    //desserts
+    // desserts
     Food(
       name: "Chocolate Lava Cake",
-      description:
-          "Warm, rich chocolate cake with a gooey molten center, served with a dusting of powdered sugar.",
-      imagePath: "lib/images/dessert1.png",
+      description: "Warm, rich chocolate cake with a gooey molten center, served with a dusting of powdered sugar.",
+      imagePath: "assets/images/desserts/dessert1.jpg",
       prices: 550,
       availableAddons: [
         Addon(name: "Vanilla ice cream", price: 100),
@@ -131,12 +117,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.desserts,
     ),
-
     Food(
       name: "Classic Cheesecake",
-      description:
-          "Creamy vanilla cheesecake with a buttery graham cracker crust and a hint of lemon zest.",
-      imagePath: "lib/images/dessert2.png",
+      description: "Creamy vanilla cheesecake with a buttery graham cracker crust and a hint of lemon zest.",
+      imagePath: "assets/images/desserts/dessert2.jpg",
       prices: 600,
       availableAddons: [
         Addon(name: "Strawberry sauce", price: 70),
@@ -145,12 +129,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.desserts,
     ),
-
     Food(
       name: "Fruit Parfait",
-      description:
-          "Layers of creamy yogurt, fresh berries, granola, and a drizzle of honey for a light, healthy treat.",
-      imagePath: "lib/images/dessert3.png",
+      description: "Layers of creamy yogurt, fresh berries, granola, and a drizzle of honey for a light, healthy treat.",
+      imagePath: "assets/images/desserts/dessert3.jpg",
       prices: 520,
       availableAddons: [
         Addon(name: "Extra granola", price: 40),
@@ -159,12 +141,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.desserts,
     ),
-
     Food(
       name: "Tiramisu",
-      description:
-          "Classic Italian dessert made with layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
-      imagePath: "lib/images/dessert4.png",
+      description: "Classic Italian dessert made with layers of espresso-soaked ladyfingers and mascarpone cream, dusted with cocoa.",
+      imagePath: "assets/images/desserts/dessert4.jpg",
       prices: 650,
       availableAddons: [
         Addon(name: "Extra cocoa", price: 30),
@@ -174,12 +154,11 @@ class Restaurant extends ChangeNotifier{
       category: FoodCategory.desserts,
     ),
 
-    //drinks
+    // drinks
     Food(
       name: "Iced Coffee",
-      description:
-          "Chilled brewed coffee served over ice, lightly sweetened with milk or cream.",
-      imagePath: "lib/images/drink1.png",
+      description: "Chilled brewed coffee served over ice, lightly sweetened with milk or cream.",
+      imagePath: "assets/images/drinks/drinks1.jpg",
       prices: 400,
       availableAddons: [
         Addon(name: "Vanilla syrup", price: 40),
@@ -188,12 +167,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.drinks,
     ),
-
     Food(
       name: "Fresh Mango Smoothie",
-      description:
-          "A tropical blend of ripe mangoes, yogurt, and honey for a refreshing, creamy drink.",
-      imagePath: "lib/images/drink2.png",
+      description: "A tropical blend of ripe mangoes, yogurt, and honey for a refreshing, creamy drink.",
+      imagePath: "assets/images/drinks/drinks2.jpg",
       prices: 450,
       availableAddons: [
         Addon(name: "Chia seeds", price: 30),
@@ -202,12 +179,10 @@ class Restaurant extends ChangeNotifier{
       ],
       category: FoodCategory.drinks,
     ),
-
     Food(
       name: "Classic Lemonade",
-      description:
-          "Freshly squeezed lemons mixed with chilled water and a touch of sugar for a zesty refreshment.",
-      imagePath: "lib/images/drink3.png",
+      description: "Freshly squeezed lemons mixed with chilled water and a touch of sugar for a zesty refreshment.",
+      imagePath: "assets/images/drinks/drinks3.jpg",
       prices: 300,
       availableAddons: [
         Addon(name: "Mint", price: 20),
@@ -218,18 +193,8 @@ class Restaurant extends ChangeNotifier{
     ),
   ];
 
-  //g e t t e r s
+  // getters
   List<Food> get menu => _menu;
 
-  //o p e r a t i o n s
-  //add to cart
-  //remove from cart
-  //get total price of cart
-  //clear cart
-
-  // h e l p e r s
-  //genearete receipts
-  //format double value into money
-  //format list of addons into a string
-  
+  // You can add your cart logic and helper methods here...
 }
