@@ -45,6 +45,7 @@ class _HomePageState extends State<HomePage>
   //return list of foods i given category
   List<Widget> _getFoodInThisCategory(List<Food> fullMenu) {
     return FoodCategory.values.map((category) {
+
       List<Food> categoryMenu = _filterMenuByCategory(category, fullMenu);
       return ListView.builder(
         itemCount: categoryMenu.length,
@@ -53,16 +54,10 @@ class _HomePageState extends State<HomePage>
           //get individual food
           final food = categoryMenu[index];
 
-          //return food tile UI
-          return MyFoodTile(
-            food: food,
-            onTap: () {
-               Navigator.push(
-                context,
-                MaterialPageRoute(builder: (context) => FoodPage(food: food)),
-              );
-            },
-          );
+          //return food tile UI 
+          return MyFoodTile(food: food, onTap: (){
+ Navigator.push(context, MaterialPageRoute(builder: (context) => FoodPage(food: food)));
+          });
         },
       );
     }).toList();
@@ -92,10 +87,7 @@ class _HomePageState extends State<HomePage>
                   ],
                 ),
               ),
-                
             ],
-          
-
         body: Consumer<Restaurant>(
           builder:
               (context, restaurant, child) => TabBarView(

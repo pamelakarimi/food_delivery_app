@@ -40,18 +40,8 @@ class _LoginPageState extends State<LoginPage> {
             Icons.lock_open_rounded,
             size: 72,
             color: Theme.of(context).colorScheme.inversePrimary,
-            
           ),
           const SizedBox(height: 25),
-       Image.asset(
-  'assets/images/burgers/burgers1.jpg',
-  width: 200,
-  height: 200,
-  errorBuilder: (context, error, stackTrace) {
-    return const Text('Failed to load image');
-  },
-),
-
           //message, app slogan
           Text(
             "Food delivery App",

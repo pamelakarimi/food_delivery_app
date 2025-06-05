@@ -24,13 +24,14 @@ class MyFoodTile extends StatelessWidget {
                   children: [
                   Text(food.name),
                   Text(
-                    'KES${food.prices}',
+                    'KES ${food.price}',
                     style: TextStyle(color: Theme.of(context).colorScheme.primary),),
                     const SizedBox(height: 10,),
                   Text(food.description, style: TextStyle(color: Theme.of(context).colorScheme.inversePrimary),),
                 ],),
                 ),
             const SizedBox(width: 15,),
+
                 //food image
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8),
