@@ -31,9 +31,9 @@ class _PaymentPageState extends State<PaymentPage> {
                 child: ListBody(
                   children: [
                     Text("Card Number: $cardNumber"),
-                       Text("Expiry Date: $expiryDate"),
-                          Text("Card Holder name: $cardHolderName"),
-                             Text("CVV: $cvvCode"),
+                    Text("Expiry Date: $expiryDate"),
+                    Text("Card Holder name: $cardHolderName"),
+                    Text("CVV: $cvvCode"),
                   ],
                 ),
               ),
@@ -41,21 +41,24 @@ class _PaymentPageState extends State<PaymentPage> {
                 //cancel btton
                 TextButton(
                   onPressed: () => Navigator.pop(context),
-                  child: const Text("Cancel")),
-                   
-      
+                  child: const Text("Cancel"),
+                ),
+
                 //yes button
-                 TextButton(
-                  onPressed: () => Navigator.push(context,
-                   MaterialPageRoute(builder: (context) => DeliveryProgressPage(),
-                   )
-                   ),
-                    child: const Text("Yes"),
-                    ),
-                    
+                TextButton(
+                  onPressed: () {
+                    Navigator.pop(context);
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(
+                        builder: (context) => DeliveryProgressPage(),
+                      ),
+                    );
+                  },
+                  child: const Text("Yes"),
+                ),
               ],
-      ),
-            
+            ),
       );
     }
   }
@@ -99,8 +102,7 @@ class _PaymentPageState extends State<PaymentPage> {
               formKey: formKey,
             ),
 
-          const SizedBox(height: 25),
-
+            const SizedBox(height: 25),
 
             MyButton(onTap: userTappedPay, text: "Pay now"),
             const SizedBox(height: 25),

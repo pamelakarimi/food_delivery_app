@@ -1,9 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:food_delivery_app/components/my_drawer_tile.dart';
 import 'package:food_delivery_app/pages/settings_page.dart';
+import 'package:food_delivery_app/services/auth/auth_services.dart';
 
 class MyDrawer extends StatelessWidget {
   const MyDrawer({super.key});
+
+  void logout() {
+    final _authServices = AuthServices();
+    _authServices.signOut();
+  }
 
   @override
   Widget build(BuildContext context) {
@@ -35,11 +41,13 @@ class MyDrawer extends StatelessWidget {
           MyDrawerTile(
             text: "S E T T I N G S",
             icon: Icons.settings,
-           onTap: () {Navigator.pop(context);
-           Navigator.push(context, MaterialPageRoute(builder: (context) => const SettingsPage(),
-           )
-           );
-           },
+            onTap: () {
+              Navigator.pop(context);
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => const SettingsPage()),
+              );
+            },
           ),
           const Spacer(),
           //logout
